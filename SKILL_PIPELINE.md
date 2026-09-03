@@ -111,7 +111,7 @@ After skill is finalized:
    ```bash
    python -m scripts.run_loop \
      --eval-set <trigger-eval.json> --skill-path <path> \
-     --model anthropic/claude-opus-4-6 --max-iterations 5 --verbose
+     --model anthropic/claude-fable-5-1 --max-iterations 5 --verbose
    ```
 4. Apply `best_description` to SKILL.md frontmatter
 

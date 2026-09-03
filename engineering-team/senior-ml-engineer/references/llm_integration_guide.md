@@ -47,7 +47,7 @@ class OpenAIProvider(LLMProvider):
         return response.choices[0].text
 
 class AnthropicProvider(LLMProvider):
-    def __init__(self, api_key: str, model: str = "claude-3-opus"):
+    def __init__(self, api_key: str, model: str = "claude-fable-5-1"):
         self.client = Anthropic(api_key=api_key)
         self.model = model
 
@@ -236,6 +236,7 @@ def calculate_cost(
         "gpt-4": {"input": 0.03, "output": 0.06},
         "gpt-3.5-turbo": {"input": 0.0005, "output": 0.0015},
         "claude-3-opus": {"input": 0.015, "output": 0.075},
+        "claude-fable-5-1": {"input": 0.01, "output": 0.05},
     }
 
     prices = PRICING.get(model, {"input": 0.01, "output": 0.03})

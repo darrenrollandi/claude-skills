@@ -41,6 +41,7 @@ COST_PER_1K = {
     'claude-3-opus': 0.015,
     'claude-3-sonnet': 0.003,
     'claude-3-haiku': 0.00025,
+    'claude-fable-5-1': 0.01,
     'default': 0.01
 }
 
@@ -429,7 +430,7 @@ Examples:
     parser.add_argument('--optimize', '-O', action='store_true', help='Generate optimized version')
     parser.add_argument('--extract-examples', '-e', action='store_true', help='Extract few-shot examples')
     parser.add_argument('--model', '-m', default='gpt-4',
-                       choices=['gpt-4', 'gpt-4-turbo', 'gpt-3.5-turbo', 'claude-3-opus', 'claude-3-sonnet', 'claude-3-haiku'],
+                       choices=['gpt-4', 'gpt-4-turbo', 'gpt-3.5-turbo', 'claude-3-opus', 'claude-3-sonnet', 'claude-3-haiku', 'claude-fable-5-1'],
                        help='Model for token/cost estimation')
     parser.add_argument('--output', '-o', help='Output file path')
     parser.add_argument('--json', '-j', action='store_true', help='Output as JSON')
